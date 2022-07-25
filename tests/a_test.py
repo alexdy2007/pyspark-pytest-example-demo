@@ -12,9 +12,7 @@ def tempSparkContext():
 # Arrange
 @pytest.fixture
 def test_data(tempSparkContext):
-  print(dir(tempSparkContext))
-  print(tempSparkContext)
-  print(type(tempSparkContext))
+ 
   df = tempSparkContext.createDataFrame(
     [
         (1, "foo",4),  # create your data here, be consistent in the types.
