@@ -13,7 +13,7 @@ def tempSparkContext():
 def test_do_word_counts(tempSparkContext):
     """ test word couting
     Args:
-        spark_context: test fixture SparkContext
+        tempSparkContext: test fixture SparkSession
     """
     
     data =  [
