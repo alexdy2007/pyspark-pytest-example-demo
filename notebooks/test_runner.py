@@ -10,10 +10,6 @@ import sys
 
 # COMMAND ----------
 
-from basictransforms.transform
-
-# COMMAND ----------
-
 # Run all tests in the repository root.
 notebook_path = dbutils.notebook.entry_point.getDbutils().notebook().getContext().notebookPath().get()
 repo_root = os.path.dirname(os.path.dirname(notebook_path))
