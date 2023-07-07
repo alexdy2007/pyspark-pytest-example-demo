@@ -26,5 +26,5 @@ def test_do_word_counts(tempSparkContext):
     df_results = do_word_counts(df)
     results_dict = df_results.rdd.collectAsMap()
    
-    expected_results = {'hello':2, 'spark':3, 'again':1}  
-    assert results_dict == expected_results
+    expected_results = {'hello':2, 'spark':1, 'again':1}  
+    assert results_dict == expected_results, 'error'

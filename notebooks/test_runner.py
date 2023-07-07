@@ -1,11 +1,26 @@
 # Databricks notebook source
+# MAGIC %pip install pytest
+
+# COMMAND ----------
+
 dbutils.library.restartPython()
 
 # COMMAND ----------
 
-import pytest
+from basictransforms.word_count import do_word_counts
+from pyspark.sql import types as T
 import os
 import sys
+import pytest
+
+data =  [
+    'hello spark',
+    'hello again spark spark'
+  ]
+
+df = spark.createDataFrame(data, T.StringType()).toDF('sentences')
+df1 = do_word_counts(df)
+display(df1)
 
 
 # COMMAND ----------
