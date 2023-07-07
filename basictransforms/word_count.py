@@ -14,3 +14,7 @@ def do_word_counts(df):
  )
   
   return df_word_count
+
+
+def new_function():
+  return "ABC"
